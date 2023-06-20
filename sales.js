@@ -67,27 +67,51 @@ CompanyLocation.prototype.calculateTotalDailyCookies = function () {
 };
 
 CompanyLocation.prototype.render = function (){
-  const article = document.createElement('article');
-    const parentElement = document.getElementById('cookieData');
-    parentElement.appendChild(article);
-    const h3 = document.createElement('h3');
-    article.appendChild(h3);
-    const ul = document.createElement('ul');
-    article.appendChild(ul);
-    for (let i = 0; i < hours.length; i++) {
-      const li = document.createElement('li');
-      li.textContent = `${hours[i]}: ${this.cookiesEachHour[i]} cookies`;
-      ul.appendChild(li);
-    }
-    const li = document.createElement('li');
-    ul.appendChild(li);
-    li.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+  const parentElement = document.getElementById('cookieTable');
+  const tableRow = document.createElement('tr');
+  parentElement.appendChild(tableRow);
+  const tableData = document.createElement('td');
+  tableRow.appendChild(tableData)
+  tableData.textContent = this.storeName;
+
+  for (let i = 0; i < this.cookiesEachHour.length; i++) {
+    const element = this.cookiesEachHour[i];
+    const tableData2 = document.createElement('td');
+    tableRow.appendChild(tableData2);
+    tableData2.textContent = element;
+  }
+  const tableData3 = document.createElement('td');
+  tableRow.appendChild(tableData3);
+  tableData3.textContent = this.totalDailyCookies;
+  
 }
 
+function createTableStructure() {
+  const parentContainer = document.getElementById('cookieContainer');
+  const table = document.createElement('table');
+  table.id = 'cookieTable'
+  parentContainer.appendChild(table);
+  const tableRow = document.createElement('tr');
+  table.appendChild(tableRow);
+  
+  const tableData1 = document.createElement('th');
+  tableRow.appendChild(tableData1);
+  tableData1.textContent = '';
+  for (let i = 0; i < hours.length; i++) {
+    const hour = hours[i];
+    const tableData = document.createElement('th');
+    tableRow.appendChild(tableData);
+    tableData.textContent = hour;
+  }
+  const tableData2 = document.createElement('th');
+  tableRow.appendChild(tableData2);
+  tableData2.textContent ='Daily Location Total';
+}
 
-const seattle = new CompanyLocation('Seattle', 23, 65, 2.3); 
+createTableStructure()
+
+const seattle = new CompanyLocation('Seattle', 23, 65, 2.3);
 const tokyo = new CompanyLocation('Tokyo' ,3, 24, 1.2);
-console.log(tokyo)
 const Dubai = new CompanyLocation('Dubai', 11, 38, 3.7);
 const Paris = new CompanyLocation('Paris', 20, 38, 2.3);
 const Lima = new CompanyLocation('Lima', 2, 16, 4.6);
