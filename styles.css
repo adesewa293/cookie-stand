@@ -3,3 +3,49 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 100%);
+  text-align: center;
+  padding: 20px 0;
+}
+h2 {
+  color: #097957;
+}
+.location1 {
+  background-color: #22c1c3;
+  display: flex;
+  margin-bottom: 120px;
+  padding-bottom: 120px;
+}
+.location2 {
+  background-color: #d1bc4b;
+  display: flex;
+  flex-grow: inherit;
+  padding-top: 120px;
+  margin-bottom: 100px;
+}
+.footer-container {
+  background-color: #f1066d;
+  color: white;
+  display: flex;
+}
+ul {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+}
