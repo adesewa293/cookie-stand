@@ -8,6 +8,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  padding: 10px;
+}
 header {
   background: rgb(131,58,180);
   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 100%);
@@ -16,24 +19,29 @@ header {
 }
 h2 {
   color: #097957;
+  text-align: center;
 }
 .location1 {
   background-color: #22c1c3;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 120px;
   padding-bottom: 120px;
+  font-size: 20px;
 }
 .location2 {
   background-color: #d1bc4b;
   display: flex;
-  flex-grow: inherit;
+  justify-content: space-between;
   padding-top: 120px;
   margin-bottom: 100px;
+  font-size: 20px;
 }
 .footer-container {
   background-color: #f1066d;
   color: white;
   display: flex;
+  padding: 10px 6px;
 }
 ul {
   display: flex;
