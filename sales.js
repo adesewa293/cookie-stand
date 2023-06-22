@@ -135,10 +135,23 @@ for (let i = 0; i < hours.length; i++) {
   tableData4.textContent = totals;
 }
 const totalCount = document.createElement("td");
-tableRow2.appendChild(totalCount);
-totalCount.textContent =
+  tableRow2.appendChild(totalCount);
+  totalCount.textContent =
   seattle.totalDailyCookies +
   tokyo.totalDailyCookies +
   dubai.totalDailyCookies +
   paris.totalDailyCookies +
   lima.totalDailyCookies;
+
+
+addLocationForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+   
+    const location = event.target.name.value;
+    const minCustPerHour = event.target.minCustPerHour.value;
+    const maxCustPerHour = event.target.maxCustPerHour.value;
+    const avgCookiesPerHour = event.target.avgCookieSoldPerCust.value;
+
+    const newStoreLocation = new CompanyLocation(location, minCustPerHour, maxCustPerHour, avgCookiesPerHour)
+    addLocationForm.reset();
+  })

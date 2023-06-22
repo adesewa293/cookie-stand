@@ -61,3 +61,10 @@ td {
   border: 1px solid black;
   text-align: center;
 }
+#addLocationForm label, button{
+  display: block;
+  /* padding-bottom: 15px; */
+}
+button {
+  background-color: #94bbe9;
+}
