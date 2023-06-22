@@ -41,7 +41,8 @@ h2 {
   background-color: #f1066d;
   color: white;
   display: flex;
-  padding: 10px 6px;
+  margin-top: 100px;
+  padding: 20px 6px;
 }
 ul {
   display: flex;
