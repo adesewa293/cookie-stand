@@ -116,13 +116,12 @@ const dubai = new CompanyLocation("Dubai", 11, 38, 3.7);
 const paris = new CompanyLocation("Paris", 20, 38, 2.3);
 const lima = new CompanyLocation("Lima", 2, 16, 4.6);
 
-
 const tableContainer = document.getElementById("cookieTable");
 const tableRow2 = document.createElement("tr");
 tableContainer.appendChild(tableRow2);
-const Totals = document.createElement('td');
+const Totals = document.createElement("td");
 tableRow2.appendChild(Totals);
-Totals.textContent = 'Totals';
+Totals.textContent = "Totals";
 for (let i = 0; i < hours.length; i++) {
   const totals =
     seattle.cookiesEachHour[i] +
@@ -130,11 +129,16 @@ for (let i = 0; i < hours.length; i++) {
     dubai.cookiesEachHour[i] +
     paris.cookiesEachHour[i] +
     lima.cookiesEachHour[i];
- 
+
   const tableData4 = document.createElement("td");
   tableRow2.appendChild(tableData4);
   tableData4.textContent = totals;
 }
-const totalCount = document.createElement('td')
+const totalCount = document.createElement("td");
 tableRow2.appendChild(totalCount);
-totalCount.textContent = seattle.totalDailyCookies + tokyo.totalDailyCookies + dubai.totalDailyCookies + paris.totalDailyCookies + lima.totalDailyCookies ;
+totalCount.textContent =
+  seattle.totalDailyCookies +
+  tokyo.totalDailyCookies +
+  dubai.totalDailyCookies +
+  paris.totalDailyCookies +
+  lima.totalDailyCookies;
